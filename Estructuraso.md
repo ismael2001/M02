@@ -70,8 +70,10 @@ La memoria caché es un tipo de memoria de acceso rápido, que guarda los progra
 
 
 
-total     used        free      shared  buff/cache   available
-Mem:            3831        1099         944         222        1787        2212
+
+   total     used        free      shared  buff/cache   available
+
+   Mem:     3831        1099         944         222        1787        2212
 
 
 
