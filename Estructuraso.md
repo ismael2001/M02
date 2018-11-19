@@ -16,13 +16,13 @@ Analicemos el comportamiento del sistema operativo en cada módulo. Usaremos los
 
 ### Núcleo
 
-1. ** ¿Dónde reside el kernel en el disco? ** Escriba el comando con la salida y diga exactamente dónde está el kernel.
+1. **¿Dónde reside el kernel en el disco?** Escriba el comando con la salida y diga exactamente dónde está el kernel.
 
 
 Reside en la carpeta /boot, lo podemos ver con el comando uname -r 4.18.16-200.fc28.x86_64.
 
 
-2. ** ¿Cómo podemos mostrar la versión real del kernel que está cargada en nuestro sistema **? Por favor muestra el resultado del comando
+2. **¿Cómo podemos mostrar la versión real del kernel que está cargada en nuestro sistema?** Por favor muestra el resultado del comando
 
 
 Con el comando uname -a.
@@ -30,7 +30,8 @@ Con el comando uname -a.
 
 Linux a11 4.18.7-100.fc27.x86_64 #1 SMP Thu Sep 13 18:41:39 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
 
-3. ** ¿Cómo podemos mostrar el hardware detectado por el kernel? ** Por favor, muestre el resultado del comando.
+
+3. **¿Cómo podemos mostrar el hardware detectado por el kernel?** Por favor, muestre el resultado del comando.
 
 
 Con el comando lspci.
@@ -54,7 +55,7 @@ Con el comando lspci.
 03:00.0 PCI bridge: Intel Corporation 82801 PCI Bridge (rev 41)
 
 
-4. ** ¿Cómo podemos mostrar los módulos (controladores) realmente en uso? ** ¿Qué módulo se está utilizando para la tarjeta gráfica de video?
+4. **¿Cómo podemos mostrar los módulos (controladores) realmente en uso?** ¿Qué módulo se está utilizando para la tarjeta gráfica de video?
 
 
 lsmod, se utiliza el módulo video 45056  1 i915.
@@ -62,17 +63,19 @@ lsmod, se utiliza el módulo video 45056  1 i915.
 
 ### administrador de memoria
 
-1. ** ¿Qué es la memoria 'caché' que muestra el comando 'free -m'? ** Muestra también la salida del comando
+1. **¿Qué es la memoria 'caché' que muestra el comando 'free -m'?** Muestra también la salida del comando
 
 
 La memoria caché es un tipo de memoria de acceso rápido, que guarda los programas para que no tenga que abrirlo el disco duro.
 
 
-              total        used        free      shared  buff/cache   available
-Mem:           3831        1099         944         222        1787        2212
+
+total     used        free      shared  buff/cache   available
+Mem:            3831        1099         944         222        1787        2212
 
 
-2. ** ¿Qué es la memoria 'swap' que muestra el comando 'free -m'? **
+
+2. **¿Qué es la memoria 'swap' que muestra el comando 'free -m'?**
 
 
 La memoria swap sirve para cuando nuestro pc se queda sin memoria.
@@ -80,13 +83,13 @@ La memoria swap sirve para cuando nuestro pc se queda sin memoria.
 
 Swap:          5116           0        5116
 
-3. ** ¿Cómo maneja el administrador de memoria un problema de falta de memoria? **
+3. **¿Cómo maneja el administrador de memoria un problema de falta de memoria?**
 
 
 Con el progama OOM Killer que lo que hace es matar procesos.
 
 
-4. ** ¿Cómo podemos mostrar la 'puntación de memoria' real de una instancia de Gimp que se está ejecutando? **
+4. **¿Cómo podemos mostrar la 'puntación de memoria' real de una instancia de Gimp que se está ejecutando?**
 
 
 COn el comando ps auxf | gimp.
@@ -94,7 +97,7 @@ COn el comando ps auxf | gimp.
 
 ### Administrador de entrada / salida
 
-1. ** ¿Cómo podemos enumerar todas las interrupciones que conoce nuestro sistema operativo? ** Mostrar también el resultado del comando
+1. **¿Cómo podemos enumerar todas las interrupciones que conoce nuestro sistema operativo?** Mostrar también el resultado del comando
 
 
 Con cat /proc/interrupts
@@ -143,19 +146,19 @@ Con cat /proc/interrupts
  
 
 
-2. ** En los sistemas multiprocesador, ¿cómo distribuye el sistema operativo las interrupciones de forma predeterminada? ** ¿Cómo podemos cambiar el comportamiento predeterminado?
+2. **En los sistemas multiprocesador, ¿cómo distribuye el sistema operativo las interrupciones de forma predeterminada?** ¿Cómo podemos cambiar el comportamiento predeterminado?
 
 
 El sistema operativo las distruye en cada núcleo, podemos cambiar el comportamiento con el comando tuned-adm list.
 
 
-3. ** ¿Cómo controla un sistema operativo un dispositivo que no tiene interrupciones? ** Explique el proceso
+3. **¿Cómo controla un sistema operativo un dispositivo que no tiene interrupciones?** Explique el proceso
 
 
 Lo hace mediante Polling, que lo que hace es solicitar datos a los dispositivos y se los proporciona.
 
 
-4. ** ¿Qué ocurrirá si dos aplicaciones desean enviar datos a través de un dispositivo de red al mismo tiempo? **
+4. **¿Qué ocurrirá si dos aplicaciones desean enviar datos a través de un dispositivo de red al mismo tiempo?**
 
 
 Dará prioridad al que mas importancia tenga.
@@ -164,7 +167,7 @@ Dará prioridad al que mas importancia tenga.
 ### administrador del sistema de archivos
 
 
-1. ** ¿Cuál es la típica estructura de carpetas de Linux? ** Describe qué es y el uso de cada carpeta.
+1. **¿Cuál es la típica estructura de carpetas de Linux?** Describe qué es y el uso de cada carpeta.
 
 - bin: aquí estan los comandos que pueden usar todos los usuarios.
 
@@ -207,7 +210,7 @@ Dará prioridad al que mas importancia tenga.
 - var contiene archivos del sistema.
 
 
-2. ** ¿Cómo podemos:? **
+2. **¿Cómo podemos:?**
 - Mueva un archivo que reside en /usr/local/src/file.md a la carpeta / opt: mv /usr/local/src/file.md/opt
 
 
